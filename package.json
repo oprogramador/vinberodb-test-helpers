@@ -1,13 +1,11 @@
 {
   "name": "vinberodb-test-helpers",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Test helpers for vinberodb and its plugins",
   "main": "build/index.js",
   "scripts": {
     "build": "rm -rf build && babel src --out-dir build --ignore tests/",
-    "create-project-symlink": "scripts/create-project-symlink.sh",
     "lint": "eslint src",
-    "postinstall": "npm run create-project-symlink",
     "prepublishOnly": "npm run build",
     "test": "mocha -r babel-register --recursive src/tests --timeout 5000"
   },
@@ -15,7 +13,13 @@
     "type": "git",
     "url": "git+https://github.com/oprogramador/vinberodb-test-helpers.git"
   },
-  "keywords": ["test", "helper", "helpers", "vinbero", "vinberodb"],
+  "keywords": [
+    "test",
+    "helper",
+    "helpers",
+    "vinbero",
+    "vinberodb"
+  ],
   "author": "oprogramador",
   "license": "MIT",
   "bugs": {
@@ -34,10 +38,12 @@
   "devDependencies": {
     "babel-cli": "^6.24.0",
     "babel-core": "^6.24.0",
+    "babel-plugin-module-resolver": "^3.0.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.24.0",
     "babel-register": "^6.24.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-improved": "^2.1.0",
+    "eslint-import-resolver-babel-module": "^4.0.0",
     "mocha": "^3.2.0"
   }
 }
