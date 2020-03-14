@@ -1,6 +1,6 @@
 {
   "name": "vinberodb-test-helpers",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Test helpers for vinberodb and its plugins",
   "main": "build/index.js",
   "scripts": {
